@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="a5_task1.FXMLDocumentController">
+    <children>
+      <SplitPane dividerPositions="0.1806020066889632" layoutY="14.0" orientation="VERTICAL" prefHeight="600.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="122.0" prefWidth="596.0">
+               <children>
+                  <Button fx:id="add" layoutX="368.0" layoutY="52.0" mnemonicParsing="false" onAction="#addAction" text="Add " />
+                  <Text layoutX="36.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name" />
+                  <TextField fx:id="firstName" layoutX="103.0" layoutY="14.0" prefHeight="25.0" prefWidth="81.0" />
+                  <TextField fx:id="lastName" layoutX="103.0" layoutY="52.0" prefHeight="25.0" prefWidth="81.0" />
+                  <TextField fx:id="position" layoutX="253.0" layoutY="14.0" prefHeight="25.0" prefWidth="81.0" />
+                  <TextField fx:id="wage" layoutX="253.0" layoutY="52.0" prefHeight="25.0" prefWidth="81.0" />
+                  <Text layoutX="37.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name" />
+                  <Text layoutX="200.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Position" />
+                  <Text layoutX="200.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wage" />
+                  <Text layoutX="368.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Age" />
+                  <TextField fx:id="age" layoutX="401.0" layoutY="13.0" prefHeight="25.0" prefWidth="95.0" />
+                  <Text fx:id="succeed" layoutX="426.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Succeed!" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <SplitPane dividerPositions="0.19780219780219782" orientation="VERTICAL" prefHeight="96.0" prefWidth="318.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                                <Button fx:id="displayAll" layoutX="54.0" layoutY="15.0" onAction="#displayAllAction" text="Display All" />
+                              <Button fx:id="earningLeast" layoutX="151.0" layoutY="15.0" mnemonicParsing="false" onAction="#earningLeastAction" text="Earning least" />
+                              <Button fx:id="findPosition" layoutX="224.0" layoutY="53.0" mnemonicParsing="false" onAction="#findPosition" text="Finding by Position" />
+                              <Button fx:id="earnMore" layoutX="54.0" layoutY="53.0" mnemonicParsing="false" onAction="#earnMore" prefHeight="25.0" prefWidth="147.0" text="Earn more than 55000" />
+                              <Button fx:id="showChart" layoutX="465.0" layoutY="53.0" mnemonicParsing="false" onAction="#showChart" text="Show Chart" />
+                              <Button fx:id="earningMost" layoutX="255.0" layoutY="15.0" mnemonicParsing="false" onAction="#earningMostAction" text="Earning Most" />
+                              <Button fx:id="earningAboveAverage" layoutX="364.0" layoutY="15.0" mnemonicParsing="false" onAction="#earningAboveAverageAction" text="Earning Above Average" />
+                              <TextField fx:id="positionInput" layoutX="351.0" layoutY="53.0" prefHeight="25.0" prefWidth="95.0" />
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <TableView fx:id="table" layoutX="21.0" layoutY="14.0" prefHeight="386.6666666666667" prefWidth="596.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="fnCol" prefWidth="123.3333410024643" text="First Name" />
+                                  <TableColumn fx:id="lnCol" prefWidth="130.66669464111328" text="Last Name" />
+                                    <TableColumn fx:id="positionCol" prefWidth="140.66668701171875" text="Position" />
+                                    <TableColumn fx:id="wageCol" prefWidth="118.66671752929688" text="Wage" />
+                                    <TableColumn fx:id="ageCol" prefWidth="83.33331298828125" text="Age" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+    </children>
+</AnchorPane>
